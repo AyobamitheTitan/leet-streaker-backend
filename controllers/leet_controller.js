@@ -78,7 +78,6 @@ const getStreak = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     // !TODO Implement this in a try/catch
     const user = yield (0, get_leetcode_user_1.get_leetcode_user)(username);
     const recentSubs = user.recentSubmissionList;
-    console.log((0, daye_constructor_1.default)((getUser === null || getUser === void 0 ? void 0 : getUser.lastSolvedDate) ? new Date(getUser.lastSolvedDate) : new Date()) == (0, is_same_day_1.Yesterday)());
     for (let i = 0; i < recentSubs.length; i++) {
         if ((0, is_same_day_1.default)(recentSubs[i].timestamp) &&
             recentSubs[i].statusDisplay === "Accepted") {

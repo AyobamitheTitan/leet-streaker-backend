@@ -22,7 +22,7 @@ app.use((req, res, next) => {
 app.get("/", (req, res) => {
     res.status(200).json({ application: "leet-streaker" });
 });
-const PORT = process.env.SERVER_PORT;
+const PORT = process.env.PORT;
 app.use("/api/v1", user_router_1.default);
 app.use((req, res, next) => (0, auth_1.default)(req, res, next));
 app.use("/api/leet", leet_router_1.default);
